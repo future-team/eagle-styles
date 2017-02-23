@@ -1,0 +1,165 @@
+@import "variable";
+@import "mixins/button";
+@import "mixins/label";
+@import "mixins/tab";
+@import "mixins/toast";
+@import "mixins/tooltip";
+/*@brand-primary:             purple;
+@brand-warning:       green;
+@brand-success:       yellow;
+@brand-error:       purple;
+@tooltip-bg: orange;
+@tooltip-color:#000;*/
+body{
+
+
+  //颜色
+  .public-color(@color){
+    color: @color;
+  }
+
+  .color-primary,.eg-primary{
+    .public-color(@brand-primary);
+  }
+  .color-danger,.eg-danger{
+    .public-color(@brand-danger);
+  }
+  .color-warning,.eg-warning{
+    .public-color(@brand-warning);
+  }
+  .color-info,.eg-info{
+    .public-color(@brand-info);
+  }
+  .color-success,.eg-success{
+    .public-color(@brand-success);
+  }
+  .color-error,.eg-error{
+    .public-color(@brand-error);
+  }
+  .eg-active,.eg-selected{
+    color:@brand-primary;
+  }
+  .eg-border{
+    border-color:darken(@gray-lighter,10%);
+  }
+
+  //btn
+  .btn-skin();
+  //label
+  .label-skin();
+  //tab
+  .tab-skin();
+  //toast
+  .toast-skin();
+  //tooltip
+  .tooltip-skin();
+  //checkbox radio
+  .eg-input.checkbox, .eg-input.radio{
+    .input-icon{
+      fill:lighten(@gray-light,10%);
+    }
+    &.active{
+      .input-icon{
+        fill: @brand-primary;
+      }
+
+    }
+    &.disabled{
+      label{
+        color: lighten(@gray-light,10%);
+
+      }
+      .input-icon{
+        fill: lighten(@gray-light,35%);
+      }
+
+    }
+  }
+  //分页组件
+  .eg-paging-active{
+    color: @brand-primary;
+  }
+  .eg-paging-disabled{
+    color:#ccc;
+  }
+
+  //日期选择组件
+  .eg-calendar-container{
+    .eg-calendar-box{
+      .eg-calendar-selected{
+        color: @white !important;
+        background:@brand-primary ;
+      }
+      .eg-calendar-disabled{
+        color: #ccc;
+      }
+    }
+  }
+  .eg-calendar-box{
+    background: @white;
+  }
+
+
+  //弹出层
+  .eg-dialog{
+    background: @white;
+    border-color: #e5e5e5;
+    .header{
+      &.header-bg{
+        background: #eee;
+      }
+    }
+    .footer{
+      background: @white;
+    }
+  }
+  //panel
+  .eg-panel{
+    background-color: @panel-backgourd-color;
+  }
+  .eg-panel-header{
+    color: @gray-dark;
+    background-color: @panel-header-backgourd-color;
+    border-color: @panel-border-color;
+  }
+  .eg-panel-footer{
+    background-color: @panel-footer-backgourd-color;
+    border-top-color:  @panel-border-color;
+  }
+  .eg-panel-header-flag{
+    background-color:@panel-backgourd-color;
+    &:before{
+      background: @brand-primary none no-repeat scroll 0 0;
+    }
+  }
+
+  //table
+  .eg-table{
+    background: @white;
+    tr{
+      &.eg-tr-split{
+        td{
+          border-bottom-color: @tr-split-line;
+        }
+      }
+      th{
+        color: #999;
+      }
+      td{
+        color: #333;
+      }
+    }
+    thead{
+      th{
+        border-bottom-color:  @tr-split-line;
+      }
+    }
+    tbody{
+      tr{
+        &:nth-of-type(2n){
+          background: #f7f7f7;
+        }
+      }
+    }
+  }
+}

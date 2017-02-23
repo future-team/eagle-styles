@@ -1,0 +1,61 @@
+.eg-tooltip-container {
+  display: inline-block;
+  position: relative;
+  &:hover{
+    .eg-tooltip-wraper {
+      visibility: visible;
+    }
+  }
+  .eg-tooltip-wraper {
+    visibility: hidden;
+    position: absolute;
+    min-width: 90px;
+    z-index: 9001;
+    margin: 5px 0;
+    font-size: 13px;
+    text-align: left;
+    .border-radius(3px);
+    .eg-tooltip-content {
+      text-align: center;
+      padding: 5px;
+      min-width: 90px;
+    }
+    .eg-tooltip-arrow-down, .eg-tooltip-arrow-top, .eg-tooltip-arrow-left,.eg-tooltip-arrow-right {
+      border-style: solid;
+      position: absolute;
+      height: 0;
+      width: 0;
+      line-height: 0;
+    }
+    .eg-tooltip-arrow-down{
+      left: 50%;
+      margin-left:-4px;
+      top: -5px;
+      border-width: 0 5px 5px;
+    }
+    .eg-tooltip-arrow-top {
+      left: 50%;
+      margin-left:-4px;
+      bottom: -5px;
+      border-width:5px 5px 0;
+    }
+    .eg-tooltip-arrow-left {
+      right: -5px;
+      top: 50%;
+      margin-top:-4px;
+      border-width: 5px 0 5px 5px;
+    }
+    .eg-tooltip-arrow-right{
+      left: -10px;
+      top: 50%;
+      margin-top:-4px;
+      border-width: 5px;
+    }
+
+  }
+  .eg-tooltip-show{
+    visibility: visible;
+  }
+
+}
+.tooltip-skin();

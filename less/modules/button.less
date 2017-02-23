@@ -1,0 +1,53 @@
+.eg-btn{
+    //btn颜色
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    outline: 0;
+    text-decoration: none;
+    font-weight: @btn-font-weight;
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+    .user-select(none);
+}
+
+
+.eg-btn-lg {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-base);
+}
+.eg-btn-sm {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-small; @btn-border-radius-base);
+}
+.eg-btn-xs {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-small; @line-height-small; @btn-border-radius-base);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.eg-btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.eg-btn-block + .eg-btn-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.eg-btn-block {
+        width: 100%;
+    }
+}
+
+.btn-skin();

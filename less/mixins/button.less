@@ -1,0 +1,132 @@
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
+
+.button-variant(@color; @background; @border) {
+
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+    }
+
+    &.eg-btn-active{
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+
+        &:hover,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 12%);
+            border-color: darken(@border, 20%);
+        }
+    }
+
+    &.eg-btn-disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: lighten(@background,18%);
+            border-color: lighten(@border,15%);
+            color: darken(@color,10%);
+            cursor: default;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}
+.btn-skin(){
+    .eg-btn{
+        .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+    }
+
+    .eg-btn-default {
+        .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+        //透明
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-default-border);
+        }
+    }
+    .eg-btn-primary {
+        .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-primary-border);
+        }
+        &:hover {
+            color: @btn-primary-color;
+            background-color: darken(@btn-primary-bg, 2%);
+            border-color: darken(@btn-primary-border, 5%);
+        }
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &,
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: darken(@btn-primary-bg,10%);
+                border-color: darken(@btn-primary-border,5%);
+                color: darken(@btn-primary-color,10%);
+            }
+        }
+    }
+    .eg-btn-white {
+        .button-variant(@btn-white-color; @btn-white-bg; @btn-white-border);
+    }
+    // Success appears as green
+    .eg-btn-success {
+        .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-success-border);
+        }
+    }
+    // Info appears as blue-green
+    .eg-btn-info {
+        .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-info-border);
+        }
+    }
+    // Warning appears as orange
+    .eg-btn-warning {
+        .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-warning-border);
+        }
+    }
+    // Danger and error appear as red
+    .eg-btn-danger {
+        .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-danger-border);
+        }
+    }
+    .eg-btn-error {
+        .button-variant(@btn-error-color; @btn-error-bg; @btn-error-border);
+        &.eg-btn-hollow{
+            .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-error-border);
+        }
+    }
+    .eg-btn-link {
+        border:none;
+        .button-variant(@gray-dark; transparent; @btn-error-border);
+    }
+}

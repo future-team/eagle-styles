@@ -1,0 +1,43 @@
+.generic-label(@label-margin,@label-border,@label-padding,@label-radius,@label-line-height,@label-hover,@itembox-margin){
+
+    .eg-label{
+        border-right:@label-border;
+        .border-radius(@label-radius);
+        padding:@label-padding;
+        margin: @label-margin;
+        line-height: @label-line-height;
+        &:hover{
+            text-decoration: @label-hover;
+        }
+        &:last-child{
+            border-right: none;
+           // margin-right: 0;
+        }
+    }
+
+    .item-box{
+        margin:@itembox-margin;
+        overflow:visible;
+    }
+    .item-list{
+        width: 100%;
+    }
+}
+
+.generic-color(@prefix,@type,@color,@bk-color){
+
+    .@{prefix}-@{type}{
+        color: @color;
+        background-color:@bk-color ;
+    }
+}
+.label-skin(){
+    .generic-color(eg-label,active,@white,@brand-primary);
+    .generic-color(eg-label,primary,@white,@brand-primary);
+    .generic-color(eg-label,success,@white,@brand-success);
+    .generic-color(eg-label,info,@white,@brand-info);
+    .generic-color(eg-label,warning,@white,@brand-warning);
+    .generic-color(eg-label,danger,@white,@brand-danger);
+    .generic-color(eg-label,error,@white,@brand-error);
+    .generic-color(eg-label,disabled,@gray-light,@gray-lighter);
+}
