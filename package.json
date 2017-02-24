@@ -10,7 +10,8 @@
   "scripts": {
     "build": "node_modules/.bin/gulp",
     "less": "node_modules/.bin/gulp less",
-    "dev": "node_modules/.bin/gulp dev"
+    "dev": "node_modules/.bin/gulp dev",
+    "prepublish": "npm run build"
   },
   "license": "MIT",
   "author": {

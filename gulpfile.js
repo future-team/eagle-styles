@@ -35,7 +35,7 @@ gulp.task('clean', function () {
     return gulp.src(['./dist/img/*','./dist/css/*'], {read: false})
         .pipe(clean()).on('error', error );
 });
-
+//必须保持img文件和css相对路径的一致性才可以顺利转化base64格式
 gulp.task('copy-image', ['clean'],function(){ // 将字体文件拷贝到dist文件夹下
     copy('./less/img/*', './dist/img');
 });
@@ -50,6 +50,7 @@ gulp.task('min-styles', ['base64'], function() {
       .pipe(minifycss()) // 压缩css文件
       .pipe(gulp.dest(dest)); // 输出all.min.css
 });
+//将less编译为css后进行小图片base64格式的转化
 gulp.task('base64', ['less'], function() {
     return gulp.src([dest+'/*'])
         .pipe(base64())
