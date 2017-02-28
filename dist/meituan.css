@@ -1,0 +1,121 @@
+body a:hover {
+  color: #2bb8aa;
+}
+body .color-primary,
+body .eg-primary {
+  color: #2bb8aa;
+}
+body .eg-active,
+body .eg-selected {
+  color: #2bb8aa;
+}
+body .eg-btn-default {
+  color: #fff;
+  background-color: #2bb8aa;
+  border-color: transparent;
+}
+body .eg-btn-default:hover {
+  color: #fff;
+  background-color: #26a397;
+  border-color: rgba(0, 0, 0, 0);
+}
+body .eg-btn-default.eg-btn-active {
+  color: #fff;
+  background-color: #26a397;
+  border-color: rgba(0, 0, 0, 0);
+}
+body .eg-btn-default.eg-btn-active:hover,
+body .eg-btn-default.eg-btn-active.focus {
+  color: #fff;
+  background-color: #1f867c;
+  border-color: rgba(0, 0, 0, 0);
+}
+body .eg-btn-default.eg-btn-disabled,
+body .eg-btn-default[disabled],
+fieldset[disabled] body .eg-btn-default,
+body .eg-btn-default.eg-btn-disabled:hover,
+body .eg-btn-default[disabled]:hover,
+fieldset[disabled] body .eg-btn-default:hover,
+body .eg-btn-default.eg-btn-disabled:focus,
+body .eg-btn-default[disabled]:focus,
+fieldset[disabled] body .eg-btn-default:focus,
+body .eg-btn-default.eg-btn-disabled.focus,
+body .eg-btn-default[disabled].focus,
+fieldset[disabled] body .eg-btn-default.focus,
+body .eg-btn-default.eg-btn-disabled:active,
+body .eg-btn-default[disabled]:active,
+fieldset[disabled] body .eg-btn-default:active,
+body .eg-btn-default.eg-btn-disabled.active,
+body .eg-btn-default[disabled].active,
+fieldset[disabled] body .eg-btn-default.active {
+  background-color: #64dbcf;
+  border-color: rgba(38, 38, 38, 0);
+  color: #e6e6e6;
+  cursor: default;
+}
+body .eg-btn-default .badge {
+  color: #2bb8aa;
+  background-color: #fff;
+}
+body .eg-label-active {
+  color: #fff;
+  background-color: #2bb8aa;
+}
+body .eg-label-primary {
+  color: #fff;
+  background-color: #2bb8aa;
+}
+body .eg-tab-item.eg-tab-active {
+  color: #2bb8aa;
+}
+body .eg-tabset-slider-container .eg-tabset-slider {
+  border-bottom-color: #2bb8aa;
+}
+body .eg-input.checkbox.active .input-icon,
+body .eg-input.radio.active .input-icon {
+  fill: #2bb8aa;
+}
+body .eg-paging-active {
+  color: #2bb8aa;
+}
+body .eg-calendar-container .eg-calendar-box .eg-calendar-selected {
+  background: #2bb8aa;
+}
+body .eg-panel-header-flag:before {
+  background: #2bb8aa none no-repeat scroll 0 0;
+}
+body .eg-input input:not([type*="checkbox"]):not([type*="radio"]):focus {
+  border-color: #e8faf8;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #43d3c5;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #43d3c5;
+}
+body .eg-input.checkbox.active .input-icon,
+body .eg-input.radio.active .input-icon {
+  fill: #2bb8aa;
+}
+body .eg-calendar-container .eg-calendar-box .eg-calendar-selected {
+  background: #2bb8aa;
+}
+body .eg-paging-active {
+  color: #2bb8aa;
+}
+body .eg-panel-header-flag:before {
+  background: #2bb8aa none no-repeat scroll 0 0;
+}
+body .eg-suggestion li:hover,
+body .eg-suggestion li:focus {
+  color: #2bb8aa;
+}
+body .eg-suggestion li.active {
+  color: #2bb8aa;
+}
+body .eg-suggestion-warp .eg-suggestion li:not(.noresult):hover,
+body .eg-suggestion-warp .eg-suggestion li:not(.noresult):focus {
+  background: #2bb8aa;
+}
+body .eg-suggestion-warp .eg-suggestion li:not(.noresult).active {
+  background: #2bb8aa;
+}
+body .eg-validate .eg-validate-error:focus {
+  box-shadow: none!important;
+}
