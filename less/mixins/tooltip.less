@@ -1,26 +1,34 @@
-.tooltip-skin(){
-  .eg-tooltip-container {
+.tooltip-skin(@bgColor,@color){
     .eg-tooltip-wraper {
-      background: @tooltip-bg;
-      background : black\9;
-      color: @tooltip-color;
+      background: @bgColor;
+      color: @color;
+      border:1px solid #ddd;
       .eg-tooltip-arrow-down{
-        border-color: transparent transparent @tooltip-bg transparent;
-        border : none\9;
+        border-color: transparent transparent @bgColor transparent;
       }
       .eg-tooltip-arrow-top {
-        border-color: @tooltip-bg transparent transparent transparent;
-        border : none\9;
+        border-color: @bgColor transparent transparent transparent;
       }
       .eg-tooltip-arrow-left {
-        border-color: transparent transparent transparent @tooltip-bg;
-        border : none\9;
+        border-color: transparent transparent transparent @bgColor;
       }
       .eg-tooltip-arrow-right{
-        border-color: transparent @tooltip-bg transparent transparent;
-        border : none\9;
+        border-color: transparent @bgColor transparent transparent;
       }
 
     }
-  }
+}
+.arrow-skin(@bgColor) {
+    .eg-tooltip-arrow-down:before {
+      border-color: transparent transparent @bgColor transparent;
+    }
+    .eg-tooltip-arrow-top:before {
+      border-color: @bgColor transparent transparent transparent;
+    }
+    .eg-tooltip-arrow-left:before {
+      border-color: transparent transparent transparent @bgColor;
+    }
+    .eg-tooltip-arrow-right:before {
+      border-color: transparent @bgColor transparent transparent;
+    }
 }

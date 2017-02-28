@@ -1,0 +1,144 @@
+@import "variable";
+//@import "mixins/prefix";
+@import "mixins/button";
+@import "mixins/label";
+@import "mixins/tab";
+@import "mixins/toast";
+@import "mixins/tooltip";
+// meituan theme
+@brand-primary-meituan: #2bb8aa;
+@btn-default-bg-meituan: @brand-primary-meituan;
+@suggestion-hover-color-meituan: @brand-primary-meituan;
+@suggestion-active-color-meituan: @suggestion-hover-color-meituan;
+
+body {
+  a {
+    &:hover {
+      color: @brand-primary-meituan;
+    }
+  }
+  //颜色
+  .public-color(@color){
+    color: @color;
+  }
+  .color-primary,.eg-primary{
+    .public-color(@brand-primary-meituan);
+  }
+  .eg-active,.eg-selected{
+    color:@brand-primary-meituan;
+  }
+  //btn
+  //.btn-skin();
+  .eg-btn-default {
+    .button-variant(@btn-default-color; @btn-default-bg-meituan; @btn-default-border);
+  }
+  //label
+  //.label-skin();
+  .generic-color(eg-label,active,@white,@brand-primary-meituan);
+  .generic-color(eg-label,primary,@white,@brand-primary-meituan);
+
+  //tab
+  //.tab-skin();
+  .eg-tab-item{
+    &.eg-tab-active{
+      color:@brand-primary-meituan;
+    }
+  }
+
+  .eg-tabset-slider-container{
+    .eg-tabset-slider{
+      border-bottom-color: @brand-primary-meituan;
+    }
+  }
+  .eg-input.checkbox, .eg-input.radio{
+    &.active{
+      .input-icon{
+        fill: @brand-primary-meituan;
+      }
+    }
+  }
+  //分页组件
+  .eg-paging-active{
+    color: @brand-primary-meituan;
+  }
+  //日期选择组件
+  .eg-calendar-container{
+    .eg-calendar-box{
+      .eg-calendar-selected{
+        background:@brand-primary-meituan ;
+      }
+    }
+  }
+  .eg-panel-header-flag{
+    &:before{
+      background: @brand-primary-meituan none no-repeat scroll 0 0;
+    }
+  }
+  // input
+  .eg-input{
+    input:not([type*="checkbox"]):not([type*="radio"]){
+      &:focus{
+        border-color:lighten(@brand-primary-meituan,50%);
+        @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@brand-primary-meituan, 10%);
+        box-shadow: @shadow;
+        -webkit-box-shadow: @shadow;
+      }
+    }
+    &.checkbox,&.radio{
+      &.active{
+        .input-icon{
+          fill: @brand-primary-meituan;
+        }
+      }
+    }
+  }
+  // calendar
+  .eg-calendar-container{
+    .eg-calendar-box{
+      .eg-calendar-selected{
+        background:@brand-primary-meituan;
+      }
+    }
+  }
+  // paging
+  .eg-paging-active{
+    color: @brand-primary-meituan;
+  }
+  // panel
+  .eg-panel-header-flag{
+    &:before{
+      background: @brand-primary-meituan none no-repeat scroll 0 0;
+    }
+  }
+  // sugestion
+  .eg-suggestion{
+    li{
+      &:hover,&:focus{
+        color:@suggestion-hover-color-meituan;
+      }
+      &.active{
+        color:@suggestion-active-color-meituan;
+      }
+    }
+  }
+  .eg-suggestion-warp{
+    .eg-suggestion{
+      li:not(.noresult){
+        &:hover,&:focus{
+          background: lighten(@suggestion-hover-color-meituan,0%);
+        }
+        &.active{
+          background: lighten(@suggestion-hover-color-meituan,0%);
+        }
+      }
+    }
+  }
+  // validate
+  .eg-validate {
+    .eg-validate-error {
+      &:focus {
+        box-shadow: none!important;
+      }
+    }
+  }
+}
