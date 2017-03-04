@@ -229,3 +229,41 @@ b.eg-slider-arrow-right{
 .hide_img{
   opacity: 0;
 }
+
+
+.eg-slider{
+  background: @slider-bgcolor;
+  height: 4px;
+  margin: 10px auto;
+  position: relative;
+  .border-radius(10px);
+  .drag-progress{
+    background: @brand-primary;
+    width: 0;
+    height: 4px;
+    .border-radius(10px);
+  }
+  .drag-bar{
+    background: @brand-primary;
+    border: @brand-primary 1px solid;
+    .border-radius(50%);
+    width: 18px;
+    height:18px;
+    position: absolute;
+    top: -8px;
+    left: 0;
+  }
+  &-v{
+    height: 100%;
+    width: 4px;
+    margin:auto 10px;
+    .drag-progress{
+      height: 100%;
+      width: 4px;
+    }
+    .drag-bar{
+      left: -7px;
+      top: 0;
+    }
+  }
+}
