@@ -62,7 +62,7 @@ textarea,.eg-textarea{
             //right: @padding-default*2;
             top: 50%;
             display: block;
-            fill:lighten(@gray-light,10%);
+            color:lighten(@gray-light,10%);
         }
     }
     &.checkbox,&.radio{
@@ -77,14 +77,14 @@ textarea,.eg-textarea{
         .input-icon{
             display: inline-block;
             float: left;
-            fill: lighten(@gray-light,20%);
+            color: lighten(@gray-light,20%);
             margin-right:@padding-large-vertical ;
             position: relative;
-            .transition(~"fill ease-in-out .15s");
+            .transition(~"color ease-in-out .15s");
         }
         &.active{
             .input-icon{
-                fill: @brand-primary;
+                color: @brand-primary;
             }
 
         }
@@ -95,7 +95,7 @@ textarea,.eg-textarea{
 
             }
             .input-icon{
-                fill: @color;
+                color: @color;
             }
 
         }
