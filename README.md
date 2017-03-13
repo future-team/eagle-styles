@@ -26,5 +26,8 @@
   $ npm run build
 ```
 
-## Repair
+## Repair    
+
+`version 0.1.2` 新增dialog.prompt样式 
+
 
