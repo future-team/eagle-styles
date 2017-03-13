@@ -1,1014 +1,323 @@
-/*@brand-primary:             purple;
-@brand-warning:       green;
-@brand-success:       yellow;
-@brand-error:       purple;
-@tooltip-bg: orange;
-@tooltip-color:#000;*/
-body {
-  /**成功图标*/
-  /**出错提示*/
-  /**加载中*/
-}
-body .color-primary,
-body .eg-primary {
-  color: #ee5511;
-}
-body .color-danger,
-body .eg-danger {
-  color: #d9534f;
-}
-body .color-warning,
-body .eg-warning {
-  color: #e0690c;
-}
-body .color-info,
-body .eg-info {
-  color: #5bc0de;
-}
-body .color-success,
-body .eg-success {
-  color: #5cb85c;
-}
-body .color-error,
-body .eg-error {
-  color: #cc3333;
-}
-body .eg-active,
-body .eg-selected {
-  color: #ee5511;
-}
-body .eg-border {
-  border-color: #d5d5d5;
-}
-body .eg-btn {
-  color: #fff;
-  background-color: #ee5511;
-  border-color: transparent;
-}
-body .eg-btn:hover {
-  color: #fff;
-  background-color: #d64d0f;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn.eg-btn-active {
-  color: #fff;
-  background-color: #d64d0f;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn.eg-btn-active:hover,
-body .eg-btn.eg-btn-active.focus {
-  color: #fff;
-  background-color: #b5410d;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn.eg-btn-disabled,
-body .eg-btn[disabled],
-fieldset[disabled] body .eg-btn,
-body .eg-btn.eg-btn-disabled:hover,
-body .eg-btn[disabled]:hover,
-fieldset[disabled] body .eg-btn:hover,
-body .eg-btn.eg-btn-disabled:focus,
-body .eg-btn[disabled]:focus,
-fieldset[disabled] body .eg-btn:focus,
-body .eg-btn.eg-btn-disabled.focus,
-body .eg-btn[disabled].focus,
-fieldset[disabled] body .eg-btn.focus,
-body .eg-btn.eg-btn-disabled:active,
-body .eg-btn[disabled]:active,
-fieldset[disabled] body .eg-btn:active,
-body .eg-btn.eg-btn-disabled.active,
-body .eg-btn[disabled].active,
-fieldset[disabled] body .eg-btn.active {
-  background-color: #f49267;
-  border-color: rgba(38, 38, 38, 0);
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn .badge {
-  color: #ee5511;
-  background-color: #fff;
-}
-body .eg-btn-default {
-  color: #fff;
-  background-color: #ee5511;
-  border-color: transparent;
-}
-body .eg-btn-default:hover {
-  color: #fff;
-  background-color: #d64d0f;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-active {
-  color: #fff;
-  background-color: #d64d0f;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-active:hover,
-body .eg-btn-default.eg-btn-active.focus {
-  color: #fff;
-  background-color: #b5410d;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-disabled,
-body .eg-btn-default[disabled],
-fieldset[disabled] body .eg-btn-default,
-body .eg-btn-default.eg-btn-disabled:hover,
-body .eg-btn-default[disabled]:hover,
-fieldset[disabled] body .eg-btn-default:hover,
-body .eg-btn-default.eg-btn-disabled:focus,
-body .eg-btn-default[disabled]:focus,
-fieldset[disabled] body .eg-btn-default:focus,
-body .eg-btn-default.eg-btn-disabled.focus,
-body .eg-btn-default[disabled].focus,
-fieldset[disabled] body .eg-btn-default.focus,
-body .eg-btn-default.eg-btn-disabled:active,
-body .eg-btn-default[disabled]:active,
-fieldset[disabled] body .eg-btn-default:active,
-body .eg-btn-default.eg-btn-disabled.active,
-body .eg-btn-default[disabled].active,
-fieldset[disabled] body .eg-btn-default.active {
-  background-color: #f49267;
-  border-color: rgba(38, 38, 38, 0);
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-default .badge {
-  color: #ee5511;
-  background-color: #fff;
-}
-body .eg-btn-default.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: transparent;
-}
-body .eg-btn-default.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-default.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: rgba(0, 0, 0, 0);
-}
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-default.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow,
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-default.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow:hover,
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-default.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow:focus,
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-default.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow.focus,
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-default.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow:active,
-body .eg-btn-default.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-default.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-default.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: rgba(38, 38, 38, 0);
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-default.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-primary {
-  color: #333;
-  background-color: #fff;
-  border-color: #dbdad9;
-}
-body .eg-btn-primary:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #c2c1bf;
-}
-body .eg-btn-primary.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #c2c1bf;
-}
-body .eg-btn-primary.eg-btn-active:hover,
-body .eg-btn-primary.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #a9a7a5;
-}
-body .eg-btn-primary.eg-btn-disabled,
-body .eg-btn-primary[disabled],
-fieldset[disabled] body .eg-btn-primary,
-body .eg-btn-primary.eg-btn-disabled:hover,
-body .eg-btn-primary[disabled]:hover,
-fieldset[disabled] body .eg-btn-primary:hover,
-body .eg-btn-primary.eg-btn-disabled:focus,
-body .eg-btn-primary[disabled]:focus,
-fieldset[disabled] body .eg-btn-primary:focus,
-body .eg-btn-primary.eg-btn-disabled.focus,
-body .eg-btn-primary[disabled].focus,
-fieldset[disabled] body .eg-btn-primary.focus,
-body .eg-btn-primary.eg-btn-disabled:active,
-body .eg-btn-primary[disabled]:active,
-fieldset[disabled] body .eg-btn-primary:active,
-body .eg-btn-primary.eg-btn-disabled.active,
-body .eg-btn-primary[disabled].active,
-fieldset[disabled] body .eg-btn-primary.active {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-primary .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-primary.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #dbdad9;
-}
-body .eg-btn-primary.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #c2c1bf;
-}
-body .eg-btn-primary.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #c2c1bf;
-}
-body .eg-btn-primary.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #a9a7a5;
-}
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-primary.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-primary.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow:hover,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-primary.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow:focus,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-primary.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow.focus,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-primary.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow:active,
-body .eg-btn-primary.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-primary.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-primary.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-primary.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-primary:hover {
-  color: #333;
-  background-color: #fafafa;
-  border-color: #cfcdcc;
-}
-body .eg-btn-primary.disabled,
-body .eg-btn-primary[disabled],
-fieldset[disabled] body .eg-btn-primary,
-body .eg-btn-primary.disabled:hover,
-body .eg-btn-primary[disabled]:hover,
-fieldset[disabled] body .eg-btn-primary:hover,
-body .eg-btn-primary.disabled:focus,
-body .eg-btn-primary[disabled]:focus,
-fieldset[disabled] body .eg-btn-primary:focus,
-body .eg-btn-primary.disabled.focus,
-body .eg-btn-primary[disabled].focus,
-fieldset[disabled] body .eg-btn-primary.focus,
-body .eg-btn-primary.disabled:active,
-body .eg-btn-primary[disabled]:active,
-fieldset[disabled] body .eg-btn-primary:active,
-body .eg-btn-primary.disabled.active,
-body .eg-btn-primary[disabled].active,
-fieldset[disabled] body .eg-btn-primary.active {
-  background-color: #e6e6e6;
-  border-color: #cfcdcc;
-  color: #1a1a1a;
-}
-body .eg-btn-white {
-  color: #333;
-  background-color: #fff;
-  border-color: #d5d5d5;
-}
-body .eg-btn-white:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #bbbbbb;
-}
-body .eg-btn-white.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #bbbbbb;
-}
-body .eg-btn-white.eg-btn-active:hover,
-body .eg-btn-white.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #a2a2a2;
-}
-body .eg-btn-white.eg-btn-disabled,
-body .eg-btn-white[disabled],
-fieldset[disabled] body .eg-btn-white,
-body .eg-btn-white.eg-btn-disabled:hover,
-body .eg-btn-white[disabled]:hover,
-fieldset[disabled] body .eg-btn-white:hover,
-body .eg-btn-white.eg-btn-disabled:focus,
-body .eg-btn-white[disabled]:focus,
-fieldset[disabled] body .eg-btn-white:focus,
-body .eg-btn-white.eg-btn-disabled.focus,
-body .eg-btn-white[disabled].focus,
-fieldset[disabled] body .eg-btn-white.focus,
-body .eg-btn-white.eg-btn-disabled:active,
-body .eg-btn-white[disabled]:active,
-fieldset[disabled] body .eg-btn-white:active,
-body .eg-btn-white.eg-btn-disabled.active,
-body .eg-btn-white[disabled].active,
-fieldset[disabled] body .eg-btn-white.active {
-  background-color: #ffffff;
-  border-color: #fbfbfb;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-white .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-success {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-body .eg-btn-success:hover {
-  color: #fff;
-  background-color: #4cae4c;
-  border-color: #3d8b3d;
-}
-body .eg-btn-success.eg-btn-active {
-  color: #fff;
-  background-color: #4cae4c;
-  border-color: #3d8b3d;
-}
-body .eg-btn-success.eg-btn-active:hover,
-body .eg-btn-success.eg-btn-active.focus {
-  color: #fff;
-  background-color: #419641;
-  border-color: #2d672d;
-}
-body .eg-btn-success.eg-btn-disabled,
-body .eg-btn-success[disabled],
-fieldset[disabled] body .eg-btn-success,
-body .eg-btn-success.eg-btn-disabled:hover,
-body .eg-btn-success[disabled]:hover,
-fieldset[disabled] body .eg-btn-success:hover,
-body .eg-btn-success.eg-btn-disabled:focus,
-body .eg-btn-success[disabled]:focus,
-fieldset[disabled] body .eg-btn-success:focus,
-body .eg-btn-success.eg-btn-disabled.focus,
-body .eg-btn-success[disabled].focus,
-fieldset[disabled] body .eg-btn-success.focus,
-body .eg-btn-success.eg-btn-disabled:active,
-body .eg-btn-success[disabled]:active,
-fieldset[disabled] body .eg-btn-success:active,
-body .eg-btn-success.eg-btn-disabled.active,
-body .eg-btn-success[disabled].active,
-fieldset[disabled] body .eg-btn-success.active {
-  background-color: #9cd49c;
-  border-color: #80c780;
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-success .badge {
-  color: #5cb85c;
-  background-color: #fff;
-}
-body .eg-btn-success.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #4cae4c;
-}
-body .eg-btn-success.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #3d8b3d;
-}
-body .eg-btn-success.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #3d8b3d;
-}
-body .eg-btn-success.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-success.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #2d672d;
-}
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-success.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow,
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-success.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow:hover,
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-success.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow:focus,
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-success.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow.focus,
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-success.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow:active,
-body .eg-btn-success.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-success.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-success.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #80c780;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-success.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-info {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
-}
-body .eg-btn-info:hover {
-  color: #fff;
-  background-color: #46b8da;
-  border-color: #28a1c5;
-}
-body .eg-btn-info.eg-btn-active {
-  color: #fff;
-  background-color: #46b8da;
-  border-color: #28a1c5;
-}
-body .eg-btn-info.eg-btn-active:hover,
-body .eg-btn-info.eg-btn-active.focus {
-  color: #fff;
-  background-color: #2aabd2;
-  border-color: #1f7e9a;
-}
-body .eg-btn-info.eg-btn-disabled,
-body .eg-btn-info[disabled],
-fieldset[disabled] body .eg-btn-info,
-body .eg-btn-info.eg-btn-disabled:hover,
-body .eg-btn-info[disabled]:hover,
-fieldset[disabled] body .eg-btn-info:hover,
-body .eg-btn-info.eg-btn-disabled:focus,
-body .eg-btn-info[disabled]:focus,
-fieldset[disabled] body .eg-btn-info:focus,
-body .eg-btn-info.eg-btn-disabled.focus,
-body .eg-btn-info[disabled].focus,
-fieldset[disabled] body .eg-btn-info.focus,
-body .eg-btn-info.eg-btn-disabled:active,
-body .eg-btn-info[disabled]:active,
-fieldset[disabled] body .eg-btn-info:active,
-body .eg-btn-info.eg-btn-disabled.active,
-body .eg-btn-info[disabled].active,
-fieldset[disabled] body .eg-btn-info.active {
-  background-color: #a7dded;
-  border-color: #85d0e7;
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-info .badge {
-  color: #5bc0de;
-  background-color: #fff;
-}
-body .eg-btn-info.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #46b8da;
-}
-body .eg-btn-info.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #28a1c5;
-}
-body .eg-btn-info.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #28a1c5;
-}
-body .eg-btn-info.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-info.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #1f7e9a;
-}
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-info.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow,
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-info.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow:hover,
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-info.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow:focus,
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-info.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow.focus,
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-info.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow:active,
-body .eg-btn-info.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-info.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-info.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #85d0e7;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-info.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-warning {
-  color: #fff;
-  background-color: #e0690c;
-  border-color: #c85e0b;
-}
-body .eg-btn-warning:hover {
-  color: #fff;
-  background-color: #c85e0b;
-  border-color: #974708;
-}
-body .eg-btn-warning.eg-btn-active {
-  color: #fff;
-  background-color: #c85e0b;
-  border-color: #974708;
-}
-body .eg-btn-warning.eg-btn-active:hover,
-body .eg-btn-warning.eg-btn-active.focus {
-  color: #fff;
-  background-color: #a64e09;
-  border-color: #673006;
-}
-body .eg-btn-warning.eg-btn-disabled,
-body .eg-btn-warning[disabled],
-fieldset[disabled] body .eg-btn-warning,
-body .eg-btn-warning.eg-btn-disabled:hover,
-body .eg-btn-warning[disabled]:hover,
-fieldset[disabled] body .eg-btn-warning:hover,
-body .eg-btn-warning.eg-btn-disabled:focus,
-body .eg-btn-warning[disabled]:focus,
-fieldset[disabled] body .eg-btn-warning:focus,
-body .eg-btn-warning.eg-btn-disabled.focus,
-body .eg-btn-warning[disabled].focus,
-fieldset[disabled] body .eg-btn-warning.focus,
-body .eg-btn-warning.eg-btn-disabled:active,
-body .eg-btn-warning[disabled]:active,
-fieldset[disabled] body .eg-btn-warning:active,
-body .eg-btn-warning.eg-btn-disabled.active,
-body .eg-btn-warning[disabled].active,
-fieldset[disabled] body .eg-btn-warning.active {
-  background-color: #f69a52;
-  border-color: #f4832b;
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-warning .badge {
-  color: #e0690c;
-  background-color: #fff;
-}
-body .eg-btn-warning.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #c85e0b;
-}
-body .eg-btn-warning.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #974708;
-}
-body .eg-btn-warning.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #974708;
-}
-body .eg-btn-warning.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #673006;
-}
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-warning.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-warning.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow:hover,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-warning.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow:focus,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-warning.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow.focus,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-warning.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow:active,
-body .eg-btn-warning.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-warning.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-warning.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #f4832b;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-warning.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-danger {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-body .eg-btn-danger:hover {
-  color: #fff;
-  background-color: #d43f3a;
-  border-color: #b52b27;
-}
-body .eg-btn-danger.eg-btn-active {
-  color: #fff;
-  background-color: #d43f3a;
-  border-color: #b52b27;
-}
-body .eg-btn-danger.eg-btn-active:hover,
-body .eg-btn-danger.eg-btn-active.focus {
-  color: #fff;
-  background-color: #c12e2a;
-  border-color: #8b211e;
-}
-body .eg-btn-danger.eg-btn-disabled,
-body .eg-btn-danger[disabled],
-fieldset[disabled] body .eg-btn-danger,
-body .eg-btn-danger.eg-btn-disabled:hover,
-body .eg-btn-danger[disabled]:hover,
-fieldset[disabled] body .eg-btn-danger:hover,
-body .eg-btn-danger.eg-btn-disabled:focus,
-body .eg-btn-danger[disabled]:focus,
-fieldset[disabled] body .eg-btn-danger:focus,
-body .eg-btn-danger.eg-btn-disabled.focus,
-body .eg-btn-danger[disabled].focus,
-fieldset[disabled] body .eg-btn-danger.focus,
-body .eg-btn-danger.eg-btn-disabled:active,
-body .eg-btn-danger[disabled]:active,
-fieldset[disabled] body .eg-btn-danger:active,
-body .eg-btn-danger.eg-btn-disabled.active,
-body .eg-btn-danger[disabled].active,
-fieldset[disabled] body .eg-btn-danger.active {
-  background-color: #e99d9a;
-  border-color: #e27c79;
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-danger .badge {
-  color: #d9534f;
-  background-color: #fff;
-}
-body .eg-btn-danger.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #d43f3a;
-}
-body .eg-btn-danger.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #b52b27;
-}
-body .eg-btn-danger.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #b52b27;
-}
-body .eg-btn-danger.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #8b211e;
-}
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-danger.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-danger.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow:hover,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-danger.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow:focus,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-danger.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow.focus,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-danger.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow:active,
-body .eg-btn-danger.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-danger.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-danger.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #e27c79;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-danger.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-error {
-  color: #fff;
-  background-color: #fa3f39;
-  border-color: #f92720;
-}
-body .eg-btn-error:hover {
-  color: #fff;
-  background-color: #f92720;
-  border-color: #e10c06;
-}
-body .eg-btn-error.eg-btn-active {
-  color: #fff;
-  background-color: #f92720;
-  border-color: #e10c06;
-}
-body .eg-btn-error.eg-btn-active:hover,
-body .eg-btn-error.eg-btn-active.focus {
-  color: #fff;
-  background-color: #f00d06;
-  border-color: #af0a04;
-}
-body .eg-btn-error.eg-btn-disabled,
-body .eg-btn-error[disabled],
-fieldset[disabled] body .eg-btn-error,
-body .eg-btn-error.eg-btn-disabled:hover,
-body .eg-btn-error[disabled]:hover,
-fieldset[disabled] body .eg-btn-error:hover,
-body .eg-btn-error.eg-btn-disabled:focus,
-body .eg-btn-error[disabled]:focus,
-fieldset[disabled] body .eg-btn-error:focus,
-body .eg-btn-error.eg-btn-disabled.focus,
-body .eg-btn-error[disabled].focus,
-fieldset[disabled] body .eg-btn-error.focus,
-body .eg-btn-error.eg-btn-disabled:active,
-body .eg-btn-error[disabled]:active,
-fieldset[disabled] body .eg-btn-error:active,
-body .eg-btn-error.eg-btn-disabled.active,
-body .eg-btn-error[disabled].active,
-fieldset[disabled] body .eg-btn-error.active {
-  background-color: #fc9693;
-  border-color: #fb6f6b;
-  color: #e6e6e6;
-  cursor: default;
-}
-body .eg-btn-error .badge {
-  color: #fa3f39;
-  background-color: #fff;
-}
-body .eg-btn-error.eg-btn-hollow {
-  color: #333;
-  background-color: #fff;
-  border-color: #f92720;
-}
-body .eg-btn-error.eg-btn-hollow:hover {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #e10c06;
-}
-body .eg-btn-error.eg-btn-hollow.eg-btn-active {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #e10c06;
-}
-body .eg-btn-error.eg-btn-hollow.eg-btn-active:hover,
-body .eg-btn-error.eg-btn-hollow.eg-btn-active.focus {
-  color: #333;
-  background-color: #e0e0e0;
-  border-color: #af0a04;
-}
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled,
-body .eg-btn-error.eg-btn-hollow[disabled],
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow,
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled:hover,
-body .eg-btn-error.eg-btn-hollow[disabled]:hover,
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow:hover,
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled:focus,
-body .eg-btn-error.eg-btn-hollow[disabled]:focus,
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow:focus,
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled.focus,
-body .eg-btn-error.eg-btn-hollow[disabled].focus,
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow.focus,
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled:active,
-body .eg-btn-error.eg-btn-hollow[disabled]:active,
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow:active,
-body .eg-btn-error.eg-btn-hollow.eg-btn-disabled.active,
-body .eg-btn-error.eg-btn-hollow[disabled].active,
-fieldset[disabled] body .eg-btn-error.eg-btn-hollow.active {
-  background-color: #ffffff;
-  border-color: #fb6f6b;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-error.eg-btn-hollow .badge {
-  color: #fff;
-  background-color: #333;
-}
-body .eg-btn-link {
-  border: none;
-  color: #333;
-  background-color: transparent;
-  border-color: #f92720;
-}
-body .eg-btn-link:hover {
-  color: #333;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #e10c06;
-}
-body .eg-btn-link.eg-btn-active {
-  color: #333;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #e10c06;
-}
-body .eg-btn-link.eg-btn-active:hover,
-body .eg-btn-link.eg-btn-active.focus {
-  color: #333;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #af0a04;
-}
-body .eg-btn-link.eg-btn-disabled,
-body .eg-btn-link[disabled],
-fieldset[disabled] body .eg-btn-link,
-body .eg-btn-link.eg-btn-disabled:hover,
-body .eg-btn-link[disabled]:hover,
-fieldset[disabled] body .eg-btn-link:hover,
-body .eg-btn-link.eg-btn-disabled:focus,
-body .eg-btn-link[disabled]:focus,
-fieldset[disabled] body .eg-btn-link:focus,
-body .eg-btn-link.eg-btn-disabled.focus,
-body .eg-btn-link[disabled].focus,
-fieldset[disabled] body .eg-btn-link.focus,
-body .eg-btn-link.eg-btn-disabled:active,
-body .eg-btn-link[disabled]:active,
-fieldset[disabled] body .eg-btn-link:active,
-body .eg-btn-link.eg-btn-disabled.active,
-body .eg-btn-link[disabled].active,
-fieldset[disabled] body .eg-btn-link.active {
-  background-color: rgba(46, 46, 46, 0);
-  border-color: #fb6f6b;
-  color: #1a1a1a;
-  cursor: default;
-}
-body .eg-btn-link .badge {
-  color: transparent;
-  background-color: #333;
-}
-body .eg-label-active {
-  color: #fff;
-  background-color: #ee5511;
-}
-body .eg-label-primary {
-  color: #fff;
-  background-color: #ee5511;
-}
-body .eg-label-success {
-  color: #fff;
-  background-color: #5cb85c;
-}
-body .eg-label-info {
-  color: #fff;
-  background-color: #5bc0de;
-}
-body .eg-label-warning {
-  color: #fff;
-  background-color: #e0690c;
-}
-body .eg-label-danger {
-  color: #fff;
-  background-color: #d9534f;
-}
-body .eg-label-error {
-  color: #fff;
-  background-color: #cc3333;
-}
-body .eg-label-disabled {
-  color: #777;
-  background-color: #eee;
-}
-body .eg-tab-item {
-  border-bottom-color: #d5d5d5;
-}
-body .eg-tab-item.eg-tab-active {
-  color: #ee5511;
-}
-body .eg-tabset-slider-container .eg-tabset-slider {
-  border-bottom-color: #ee5511;
-}
-body .eg-tips-success {
-  background-color: #5cb85c;
-}
-body .eg-tips-error {
-  background-color: #cc3333;
-}
-body .eg-tips-loading {
-  background-color: #c3c3c3;
-}
-body .eg-input.checkbox .input-icon,
-body .eg-input.radio .input-icon {
-  fill: #919191;
-}
-body .eg-input.checkbox.active .input-icon,
-body .eg-input.radio.active .input-icon {
-  fill: #ee5511;
-}
-body .eg-input.checkbox.disabled label,
-body .eg-input.radio.disabled label {
-  color: #919191;
-}
-body .eg-input.checkbox.disabled .input-icon,
-body .eg-input.radio.disabled .input-icon {
-  fill: #d0d0d0;
-}
-body .eg-paging-active {
-  color: #ee5511;
-}
-body .eg-paging-disabled {
-  color: #ccc;
-}
-body .eg-calendar-container .eg-calendar-box .eg-calendar-selected {
-  color: #fff !important;
-  background: #ee5511;
-}
-body .eg-calendar-container .eg-calendar-box .eg-calendar-disabled {
-  color: #ccc;
-}
-body .eg-calendar-box {
-  background: #fff;
-}
-body .eg-dialog {
-  background: #fff;
-  border-color: #e5e5e5;
-}
-body .eg-dialog .header.header-bg {
-  background: #eee;
-}
-body .eg-dialog .footer {
-  background: #fff;
-}
-body .eg-panel {
-  background-color: #fff;
-}
-body .eg-panel-header {
-  color: #333;
-  background-color: #f2f2f2;
-  border-color: #ddd;
-}
-body .eg-panel-footer {
-  background-color: #f2f2f2;
-  border-top-color: #ddd;
-}
-body .eg-panel-header-flag {
-  background-color: #fff;
-}
-body .eg-panel-header-flag:before {
-  background: #ee5511 none no-repeat scroll 0 0;
-}
-body .eg-table {
-  background: #fff;
-}
-body .eg-table tr.eg-tr-split td {
-  border-bottom-color: #ddd;
-}
-body .eg-table tr th {
-  color: #999;
-}
-body .eg-table tr td {
-  color: #333;
-}
-body .eg-table thead th {
-  border-bottom-color: #ddd;
-}
-body .eg-table tbody tr:nth-of-type(2n) {
-  background: #f7f7f7;
-}
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./skin.less\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(2)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./skin.less", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./skin.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 1 */,
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		var blob = new Blob([css], { type: "text/css" });
+
+		var oldSrc = linkElement.href;
+
+		linkElement.href = URL.createObjectURL(blob);
+
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ }
+/******/ ]);
