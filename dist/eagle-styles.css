@@ -3120,8 +3120,8 @@ textarea:focus,
   text-align: right;
   padding: 10px 0;
 }
-.eg-paging-container a,
-.eg-paging-container .page {
+.eg-paging-container.theme1 a,
+.eg-paging-container.theme1 .page {
   padding: 5px;
   margin: 0 5px;
 }
@@ -3129,6 +3129,44 @@ textarea:focus,
   font-size: 12px;
   color: #999;
   margin-left: 20px;
+}
+.eg-paging-container.theme2 {
+  font-size: 12px;
+}
+.eg-paging-container.theme2 a,
+.eg-paging-container.theme2 .page,
+.eg-paging-container.theme2 select {
+  margin: 0 5px;
+  border: 1px solid #e1e1e1;
+  line-height: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 5px;
+  font-size: 12px;
+  background: #fff;
+  color: #333;
+}
+.eg-paging-container.theme2 a.eg-paging-active,
+.eg-paging-container.theme2 .page.eg-paging-active,
+.eg-paging-container.theme2 select.eg-paging-active {
+  color: #fff;
+  background: #ccc;
+  border-color: #ccc;
+}
+.eg-paging-container.theme2 select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0 25px 0 10px;
+  position: relative;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ2MjYzQkU1MDBCNTExRTdBQTgzOUJENUYxREE0QTE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ2MjYzQkU2MDBCNTExRTdBQTgzOUJENUYxREE0QTE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDYyNjNCRTMwMEI1MTFFN0FBODM5QkQ1RjFEQTRBMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDYyNjNCRTQwMEI1MTFFN0FBODM5QkQ1RjFEQTRBMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4j/VLIAAAAX0lEQVR42myMMQrAIBAE4x1nYaGFoP//n41+wExikECyhezOyLnWWu/9+EtKSXLOIYSvA6KEVkrx3r8dE0i5tIjUWlV1OQoT+GhiZnx3dyjMxd2cc98cY/DGGDc5BRgAnPwOciv3clwAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  background-position: 90% 55% ;
+}
+.eg-paging-container.theme2 .pre,
+.eg-paging-container.theme2 .next {
+  padding: 0 15px;
 }
 .eg-paging-active {
   color: #ee5511;
@@ -3648,7 +3686,6 @@ b.eg-slider-arrow-right {
 }
 .eg-validate .eg-validate-tips {
   line-height: 19px;
-  visibility: hidden;
   -webkit-transition: opacity ease-in-out .4s  0.5s linear 0;
   -moz-transition: opacity ease-in-out .4s  0.5s linear 0;
   -o-transition: opacity ease-in-out .4s  0.5s linear 0;
@@ -3660,15 +3697,38 @@ b.eg-slider-arrow-right {
   transition: opacity ease-in-out .4s  1s ease;
   position: absolute;
   opacity: 0;
-  left: -9999rem;
   padding: 10px 10px;
-  z-index: 9010;
   background: rgba(255, 255, 255, 0.8);
   min-width: 300px;
   text-align: left;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+.eg-validate .eg-validate-tips.absolute {
+  left: -9999rem;
+  z-index: 9010;
+  visibility: hidden;
+}
+.eg-validate .eg-validate-tips.absolute.fadein {
+  visibility: visible;
+  opacity: 1;
+}
+.eg-validate .eg-validate-tips.absolute.fadeout {
+  visibility: hidden;
+  opacity: 0;
+}
+.eg-validate .eg-validate-tips.relative {
+  position: relative;
+  display: none;
+}
+.eg-validate .eg-validate-tips.relative.fadein {
+  display: block;
+  opacity: 1;
+}
+.eg-validate .eg-validate-tips.relative.fadeout {
+  display: none;
+  opacity: 0;
 }
 .eg-validate .eg-validate-tips i {
   border-radius: 50%;
@@ -3703,14 +3763,6 @@ b.eg-slider-arrow-right {
 .eg-validate .eg-validate-tips.bottom {
   background: rgba(51, 51, 51, 0.8);
   color: #fff;
-}
-.eg-validate .fadein {
-  visibility: visible;
-  opacity: 1;
-}
-.eg-validate .fadeout {
-  visibility: hidden;
-  opacity: 0;
 }
 .eg-table {
   background: #fff;

@@ -7,14 +7,36 @@
         border-color: @brand-danger !important;
     }
     .eg-validate-tips{
+        &.absolute{
+            left:-9999rem;
+            z-index:9010;
+            visibility: hidden;
+            &.fadein{
+                visibility: visible;
+                opacity: 1;
+            }
+            &.fadeout{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        &.relative{
+            position: relative;
+            display: none;
+            &.fadein{
+                display: block;
+                opacity: 1;
+            }
+            &.fadeout{
+                display: none;
+                opacity: 0;
+            }
+        }
         line-height: 19px;
-        visibility: hidden;
         .transition(~"opacity ease-in-out .4s ");
         position: absolute;
         opacity: 0;
-        left:-9999rem;
         padding: 10px 10px;
-        z-index:9010;
         background: rgba(255,255,255,0.8);
         min-width: 300px;
         text-align: left;
@@ -58,13 +80,5 @@
             color: #fff;
 
         }
-    }
-    .fadein{
-        visibility: visible;
-        opacity: 1;
-    }
-    .fadeout{
-        visibility: hidden;
-        opacity: 0;
     }
 }
