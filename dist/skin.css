@@ -976,6 +976,12 @@ body .eg-dialog .header.header-bg {
 body .eg-dialog .footer {
   background: #fff;
 }
+body .eg-dialog .eg-header.header-bg {
+  background: #eee;
+}
+body .eg-dialog .eg-footer {
+  background: #fff;
+}
 body .eg-panel {
   background-color: #fff;
 }
