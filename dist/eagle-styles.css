@@ -3305,6 +3305,12 @@ textarea:focus,
 .eg-dialog-outside .content {
   padding: 0;
 }
+.eg-dialog-outside .eg-header {
+  display: none;
+}
+.eg-dialog-outside .eg-content {
+  padding: 0;
+}
 .flex-layout {
   display: -webkit-flex;
   display: flex;
